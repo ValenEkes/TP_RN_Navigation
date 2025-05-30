@@ -4,7 +4,14 @@ const StackA = createNativeStackNavigator();
 
 import ScreenA1 from '../screens/ScreenA1';
 import ScreenA2 from '../screens/ScreenA2';
-function StackANavigator() {
+import ScreenB1 from '../screens/ScreenB1';
+import ScreenB2 from '../screens/ScreenB2';
+import ScreenC1 from '../screens/ScreenC1';
+import ScreenC2 from '../screens/ScreenC2';
+import ScreenD1 from '../screens/ScreenD1';
+import ScreenD2 from '../screens/ScreenD2';
+
+export function StackANavigator() {
     return (
       <StackA.Navigator>
         <StackA.Screen name="ScreenA1" component={ScreenA1} />
@@ -13,7 +20,7 @@ function StackANavigator() {
     );
   }
   const StackB = createNativeStackNavigator();
-function StackBNavigator() {
+export function StackBNavigator() {
     return (
       <StackB.Navigator>
         <StackB.Screen name="ScreenB1" component={ScreenB1} />
@@ -22,7 +29,7 @@ function StackBNavigator() {
     );
   }
   const StackC = createNativeStackNavigator();
-  function StackCNavigator() {
+  export function StackCNavigator() {
       return (
         <StackC.Navigator>
           <StackC.Screen name="ScreenC1" component={ScreenC1} />
@@ -31,7 +38,7 @@ function StackBNavigator() {
       );
     }
     const StackD = createNativeStackNavigator();
-    function StackDNavigator() {
+    export function StackDNavigator() {
         return (
           <StackC.Navigator>
             <StackC.Screen name="ScreenD1" component={ScreenD1} />
