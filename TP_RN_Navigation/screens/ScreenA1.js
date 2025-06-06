@@ -1,16 +1,28 @@
-import { Button, StyleSheet, Text, View } from 'react-native'
+import { Button, StyleSheet, Text, View,TextInput } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'  
+import Entypo from '@expo/vector-icons/Entypo';
 const ScreenA1 = () => {
-    const navigation=useNavigation()
+  const navigation = useNavigation()
+
   return (
-    <View>
-      <Text>ScreenA1</Text>
-      <Button title="Ir A ScreenA2" onPress={() => navigation.navigate('ScreenA2')} />   
+
+      <View style={styles.container}>
+        <Text >ScreenA1</Text>
+      <TextInput placeholder='Ingrese su Nombre' />
+      <TextInput placeholder='Ingrese su Telefono' />
+      <Button title="Ir A ScreenA2" onPress={() => navigation.navigate('ScreenA2')} />
     </View>
+
   )
 }
 
 export default ScreenA1
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,              
+    backgroundColor: '#00f',
+    padding: 16,           
+  }
+})
